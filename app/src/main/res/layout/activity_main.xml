@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/toolbar_actionbar" layout="@layout/toolbar_default"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.DrawerLayout android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_actionbar">
+
+        <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+            android:clickable="true" android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" "
+                android:id="@+id/txtVStatus"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffff1914" />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="10dp"
+                android:text="STOP"
+                android:layout_marginBottom="3dp"></Button>
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="PAUSE"
+                android:layout_marginBottom="3dp"></Button>
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:layout_marginLeft="10dp"
+                android:text="PLAY"
+                android:layout_marginBottom="3dp"></Button>
+        </FrameLayout>
+
+        <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
+        <fragment android:id="@+id/fragment_drawer"
+            android:name="com.example.patrick.shoutcastplayer.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent" android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
