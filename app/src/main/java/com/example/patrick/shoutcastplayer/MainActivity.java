@@ -74,6 +74,7 @@ public class MainActivity extends ActionBarActivity
     }
 
     private void play() {
+        //Alter this Uri to your liking.
         Uri myUri = Uri.parse("http://37.187.193.36:8002");
         try {
             if (mp == null) {
