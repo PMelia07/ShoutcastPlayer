@@ -74,9 +74,10 @@ public class MainActivity extends ActionBarActivity
     }
 
     private void play() {
-        //Alter this Uri to your liking.
-        Uri myUri = Uri.parse("" +
-                "");
+        //
+        //HTTP to BCRFM STREAM....Alter this Uri to your liking.
+        //
+        Uri myUri = Uri.parse("http://37.187.193.36:8002");
         try {
             if (mp == null) {
                 this.mp = new MediaPlayer();
@@ -210,6 +211,5 @@ public class MainActivity extends ActionBarActivity
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }
